@@ -1,13 +1,13 @@
-import "./FuelQoute.css";
+import "./FuelQuote.css";
 
-function FuelQoute() {
+function FuelQuote() {
   return (
-    <div className="d-flex justify-content-center fuelQouteMain">
-      <div className="fuelQouteinner">
+    <div className="d-flex justify-content-center fuelQuoteMain">
+      <div className="fuelQuoteinner">
         <div className="row">
-          <h2 className="qouteHeading">Fuel Qoute</h2>
+          <h2 className="quoteHeading">Fuel Quote</h2>
         </div>
-        <div className="d-flex justify-content-center align-items-center row qouteRow">
+        <div className="d-flex justify-content-center align-items-center row quoteRow">
           <div className="col-6">
             <form>
               <div className="row">
@@ -86,4 +86,4 @@ function FuelQoute() {
   );
 }
 
-export default FuelQoute;
+export default FuelQuote;
