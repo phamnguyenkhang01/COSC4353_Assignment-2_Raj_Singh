@@ -54,7 +54,7 @@ function Login() {
                 Login
               </button>
             </form>
-            <div className="otherLoginsDiv">
+            {/* <div className="otherLoginsDiv">
               <span>Or login with</span>
               <a href="#">
                 <img
@@ -69,7 +69,7 @@ function Login() {
               <a href="#">
                 <img className="icons" src="./microsoft.png" alt="google" />
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
