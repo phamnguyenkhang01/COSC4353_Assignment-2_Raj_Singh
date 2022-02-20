@@ -4,6 +4,8 @@ import FuelQuoteHistory from "./FuelQuoteHistory";
 import Login from "./Login";
 import Signup from "./Signup";
 import SignupDetail from "./SignupDetail";
+import Nav from './Nav';
+import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 
 // class App extends Component {
 //   render() {
@@ -13,14 +15,19 @@ import SignupDetail from "./SignupDetail";
 
 function App(){
   return (
-    <div className="App">
-      <Login />
-      <Signup />
-      <SignupDetail />
-      <FuelQuote />
-      <FuelQuoteHistory />
-    </div>
+    <Router>
+      <div>
+        <Nav />
+        <Login></Login>
+      </div>
+    </Router>
   )
 }
 
 export default App;
+
+
+{/* <Route path="/" component={Login} />
+          <Route path="/Signup" component={Signup} />
+          <Route path="/Login" component={Login} />
+          <Route path="/Profile" component={SignupDetail} /> */}
