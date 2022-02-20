@@ -18,7 +18,7 @@ function SignupDetail() {
                   type="text"
                   class="form-control"
                   id="exampleFormControlInput1"
-                  placeholder="Adam Jhonson"
+                  placeholder="Adam Johnson"
                   maxLength={50}
                   required
                 />
@@ -73,7 +73,12 @@ function SignupDetail() {
                   required
                 >
                   <option selected>Select State</option>
+                  <option value="AL">Alabama</option>
                   <option value="CL">California</option>
+                  <option value="DE">Delaware</option>
+                  <option value="FL">Florida</option>
+                  <option value="IL">Illinois</option>
+                  <option value="MN">Minnesota</option>
                   <option value="TX">Texas</option>
                   <option value="WS">Washington</option>
                 </select>
