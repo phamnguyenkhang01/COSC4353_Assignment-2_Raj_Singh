@@ -18,8 +18,7 @@ function Signup() {
       loading = false;
       setLoading(loading) ;
   }
-  
-  var error = '';
+
   var [formdata, setFormData] = useState({
       "email": '',
       "password": '',
@@ -67,20 +66,16 @@ function Signup() {
               NotificationManager.error('Error message', err.response.data.message);
           })
       }
-      error = '';
 
       if(!formdata.email){
-          error = "Email can not be blank";
           NotificationManager.error('Error message', 'Email can not be blank');
       }else{
-				if(!validatedEmail){
-					error = "Email address can not be blank";
-					NotificationManager.error('Error message', 'Please enter a validate email address');
-				}
-			}
+        if(!validatedEmail){
+            NotificationManager.error('Error message', 'Please enter a validate email address');
+        }
+      }
       
       if(!formdata.password){
-          error = "Password can not be blank";
           NotificationManager.error('Error message', 'Password can not be blank');
       }
 
@@ -101,6 +96,7 @@ function Signup() {
       ) : (
           <span></span>
       )}
+
       <div className="d-flex justify-content-center align-items-center main_container">
         <div className="innerContainer row">
           <div className="col-6 d-flex flex-column justify-content-center align-items-center">
@@ -119,6 +115,7 @@ function Signup() {
                   required
                   onChange={handleInputChange}
                 />
+
                 <label htmlFor="password" className="form-label">
                   Password
                 </label>
@@ -132,6 +129,7 @@ function Signup() {
                   required
                   onChange={handleInputChange}
                 />
+
                 <label htmlFor="confirm_password" className="form-label">
                   Confirm Password
                 </label>
@@ -145,9 +143,11 @@ function Signup() {
                   required
                   onChange={handleInputChange}
                 />
+
                 <button type="button" className="btn btn-primary" onClick={submitRegisterForm}>
                   Signup
                 </button>
+
               </form>
             </div>
           </div>
