@@ -35,7 +35,7 @@ function FuelQuoteHistory() {
             NotificationManager.error('Error message', err.response.data.message);
           })
     }
-  }, []);
+  },);
 
 
   return (
