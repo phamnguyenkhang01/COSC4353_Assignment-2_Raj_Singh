@@ -1,4 +1,5 @@
-module.exports = (sequelize, Sequelize) => {
+//  module.exports = 
+const usermodel = (sequelize, Sequelize) => {
     return sequelize.define("users", {
         id: {
             autoIncrement: true,
@@ -50,3 +51,5 @@ module.exports = (sequelize, Sequelize) => {
         timestamps: false
     });
 };
+
+module.exports = usermodel;
