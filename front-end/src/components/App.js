@@ -6,8 +6,8 @@ import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-d
 import Login from "./Login";
 import Signup from "./Signup";
 import Profile from "./Profile";
-import FuelQoute from "./FuelQoute";
-import FuelQouteHistory from "./FuelQouteHistory";
+import FuelQuote from "./FuelQuote";
+import FuelQuoteHistory from "./FuelQuoteHistory";
 
 function App() {
   const user = JSON.parse(localStorage.getItem("loggedInUser"));
@@ -22,9 +22,9 @@ function App() {
     ) : (
       <Switch>
         <Route path="/profile" name = "" component = { Profile } />
-        <Route path="/fuel-quote" component = { FuelQoute } />
-        <Route path="/" component = { FuelQouteHistory } />
-        <Route path="/home" component = { FuelQouteHistory } />
+        <Route path="/fuel-quote" component = { FuelQuote } />
+        <Route path="/" component = { FuelQuoteHistory } />
+        <Route path="/home" component = { FuelQuoteHistory } />
         {user.status === 'Pending'? (
           <Redirect to="/profile" />
         ) : (
