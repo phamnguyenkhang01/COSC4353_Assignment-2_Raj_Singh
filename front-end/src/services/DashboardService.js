@@ -9,6 +9,10 @@ class DashboardService {
         return http.post("/api/v0/quote/",  data);
     }
 
+    getRate(data){
+        return http.post("/api/v0/quote/calculate", data);
+    }
+
     getQuotes(){
         return http.get("/api/v0/quote/");
     }

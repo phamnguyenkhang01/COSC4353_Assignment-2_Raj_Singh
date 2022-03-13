@@ -148,6 +148,18 @@ function Login() {
                   Login
                 </button>
               </form>
+              <div className="otherLoginsDiv">
+                <span>Or login with</span>
+                <a href="http://localhost:3000/#">
+                  <img className="icons firstIcon" src={ google } alt="google" />
+                </a>
+                <a href="http://localhost:3000/#">
+                  <img className="icons" src={ facebook } alt="google" />
+                </a>
+                <a href="http://localhost:3000/#">
+                  <img className="icons" src= { microsoft } alt="google" />
+                </a>
+              </div>
             </div>
           </div>
         </div>

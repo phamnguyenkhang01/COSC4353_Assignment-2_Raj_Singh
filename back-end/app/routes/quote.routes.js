@@ -6,6 +6,7 @@ module.exports = app => {
     router.post("/", verify, quoteController.quote);
 
     router.get("/", verify, quoteController.quotes);
+    router.post("/calculate", verify, quoteController.getQuote);
 
     app.use('/api/v0/quote', router);
 }
