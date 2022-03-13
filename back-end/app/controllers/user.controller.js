@@ -1,5 +1,5 @@
-const db   = require("../models");
-const User = db.users;
+const db     = require("../models");
+const User   = db.users;
 
 exports.me = (req, res) => {
     let id = req.user.id;

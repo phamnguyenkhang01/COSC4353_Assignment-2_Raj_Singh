@@ -1,8 +1,8 @@
-const db       = require("../models");
-const User     = db.users;
-const bcrypt   = require("bcryptjs");
-const jwt      = require('jsonwebtoken');
-var validator  = require("email-validator");
+const db         = require("../models");
+const User       = db.users;
+const bcrypt     = require("bcryptjs");
+const jwt        = require('jsonwebtoken');
+var validator    = require("email-validator");
 
 require('dotenv').config();
 

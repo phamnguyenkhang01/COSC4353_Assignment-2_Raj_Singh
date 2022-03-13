@@ -1,7 +1,7 @@
-const db        = require("../models");
-const Quote     = db.quotes;
-const User      = db.users
-const sequelize = db.sequelize;
+const db          = require("../models");
+const Quote       = db.quotes;
+const User        = db.users
+const sequelize   = db.sequelize;
 
 exports.quotes = (req, res) => {
     let userId = req.user.id;
