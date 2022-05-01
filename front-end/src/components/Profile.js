@@ -76,10 +76,18 @@ function Profie() {
 
       if(!formdata.full_name){
           NotificationManager.error('Error message', 'Name can not be blank');
+      }else if(formdata.full_name.length > 50){
+          NotificationManager.error('Error message', 'Name should contain maximum 50 characters');
       }
       
       if(!formdata.address_line_1){
-          NotificationManager.error('Error message', 'Address line one can not be blank');
+          NotificationManager.error('Error message', 'Address 1 can not be blank');
+      }else if(!formdata.address_line_1.length > 100){
+          NotificationManager.error('Error message', 'Address 1 should contain maximum 100 characters');
+      }
+
+      if(!formdata.address_line_2.length > 50){
+          NotificationManager.error('Error message', 'Address 2 should contain maximum 50 characters');
       }
       
       if(!formdata.city){
@@ -92,6 +100,10 @@ function Profie() {
       
       if(!formdata.zip_code){
           NotificationManager.error('Error message', 'Zip code can not be blank');
+      }else if(formdata.zip_code.length < 5){
+          NotificationManager.error('Error message', 'Minimum length of Zip code is 5');
+      }else if(formdata.zip_code.length > 9){
+          NotificationManager.error('Error message', 'Maximum length of Zip code is 9');
       }
   }
 
@@ -133,7 +145,7 @@ function Profie() {
                 </div>
                 <div className="col-md-6">
                     <label htmlFor="address_line_1" className="form-label">
-                    Address Line One
+                    Address 1
                     </label>
                     <input
                     type="text"
@@ -148,7 +160,7 @@ function Profie() {
                 </div>
                 <div className="col-md-6">
                     <label htmlFor="address_line_2" className="form-label">
-                    Address Line Two
+                    Address 2
                     </label>
                     <input
                     type="text"
@@ -180,8 +192,7 @@ function Profie() {
                     <label htmlFor="state" className="form-label">
                     State
                     </label>
-                    <input
-                    type="text"
+                    <select
                     className="form-control"
                     id="state"
                     name="state"
@@ -189,7 +200,67 @@ function Profie() {
                     placeholder="State"
                     required
                     onChange={handleInputChange}
-                    />
+                    >
+                        <option>Select</option>
+                        <option value='AL'>Alabama</option>
+                        <option value='AK'>Alaska</option>
+                        <option value='AZ'>Arizona</option>
+                        <option value='AR'>Arkansas</option>
+                        <option value='AS'>American Samoa</option>
+                        <option value='CA'>California</option>
+                        <option value='CO'>Colorado</option>
+                        <option value='CT'>Connecticut</option>
+                        <option value='DE'>Delaware</option>
+                        <option value='DC'>District of Columbia	</option>
+                        <option value='FL'>Florida</option>
+                        <option value='GA'>Georgia</option>
+                        <option value='GU'>Guam</option>
+                        <option value='HI'>Hawaii</option>
+                        <option value='ID'>Idaho</option>
+                        <option value='IL'>Illinois</option>
+                        <option value='IN'>Indiana</option>
+                        <option value='IA'>Iowa</option>
+                        <option value='KS'>Kansas</option>
+                        <option value='KY'>Kentucky</option>
+                        <option value='LA'>Louisiana</option>
+                        <option value='ME'>Maine</option>
+                        <option value='MD'>Maryland</option>
+                        <option value='MA'>Massachusetts</option>
+                        <option value='MI'>Michigan</option>
+                        <option value='MN'>Minnesota</option>
+                        <option value='MS'>Mississippi</option>
+                        <option value='MO'>Missouri</option>
+                        <option value='MT'>Montana</option>
+                        <option value='NE'>Nebraska</option>
+                        <option value='NV'>Nevada</option>
+                        <option value='NH'>New Hampshire</option>
+                        <option value='NJ'>New Jersey</option>
+                        <option value='NM'>New Mexico</option>
+                        <option value='NY'>New York</option>
+                        <option value='NC'>North Carolina</option>
+                        <option value='ND'>North Dakota</option>
+                        <option value='CM'>Northern Mariana Islands	</option>
+                        <option value='OH'>Ohio	</option>
+                        <option value='OK'>Oklahoma	</option>
+                        <option value='OR'>Oregon</option>
+                        <option value='PA'>Pennsylvania</option>
+                        <option value='PR'>Puerto Rico</option>
+                        <option value='RI'>Rhode Island	</option>
+                        <option value='SC'>South Carolina</option>
+                        <option value='SD'>South Dakota	</option>
+                        <option value='TN'>Tennessee</option>
+                        <option value='TX'>Texas</option>
+                        <option value='TT'>Trust Territories</option>
+                        <option value='UT'>Utah</option>
+                        <option value='VT'>Vermont</option>
+                        <option value='VA'>Virginia</option>
+                        <option value='VI'>Virgin Islands</option>
+                        <option value='WA'>Washington</option>
+                        <option value='WV'>West Virginia</option>
+                        <option value='WI'>Wisconsin</option>
+                        <option value='WY'>Wyoming</option>
+                    </select>
+
                 </div>
                 <div className="col-md-6">
                     <label htmlFor="zip_code" className="form-label">
