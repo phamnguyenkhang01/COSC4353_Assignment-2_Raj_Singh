@@ -79,7 +79,7 @@ exports.getQuote = (req, res) => {
                     let current_price = 1.5, location_factor = 0, history_factor = 0, profit_factor = 0.1, request_factor = 0;
                     let gallon = req.body.gallons;
                     console.log(gallon);
-                    if(userState === "texas")
+                    if(userState === "tx")
                         location_factor = 0.02;
                     else location_factor = 0.04;
 
